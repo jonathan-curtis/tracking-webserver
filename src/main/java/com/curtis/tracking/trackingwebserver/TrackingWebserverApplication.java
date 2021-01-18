@@ -41,7 +41,7 @@ public class TrackingWebserverApplication {
 	@Bean
 	public RouterFunction<ServerResponse> getImgRoute() {
 		return RouterFunctions.route().GET(IMG_ROUTE, trackingHandler::handleImg).after((req, resp) -> {
-			LOGGER.info("{} {} {} {} {}", req.exchange().getLogPrefix(),
+			LOGGER.info("{}{} {} {} {}", req.exchange().getLogPrefix(),
 					req.remoteAddress().isPresent() ? req.remoteAddress().get().toString() : "null", req.method(),
 					req.path(), resp.rawStatusCode());
 			return resp;
