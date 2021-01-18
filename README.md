@@ -61,3 +61,6 @@ It also logs the following information:
 
 ## Test Coverage
 The project has 95% unit test code coverage.
+
+## Improvements
+The logging can be improved by adding additional fields, such as request/response times.
